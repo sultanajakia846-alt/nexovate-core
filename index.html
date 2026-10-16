@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nexovate Core — Next-Gen Autonomous Sales Platform</title>
+  <!-- Tailwind CSS & FontAwesome Icons -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    .glass-card {
+      background: rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .neon-cyan-glow {
+      box-shadow: 0 0 25px -5px rgba(6, 182, 212, 0.35);
+    }
+    .hud-border {
+      border-left: 3px solid #06b6d4;
+    }
+    .pulse-green {
+      box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.6);
+      animation: pulse-green 2s infinite;
+    }
+    @keyframes pulse-green {
+      0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.6); }
+      70% { box-shadow: 0 0 0 8px rgba(16, 185, 129, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+    }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 flex flex-col md:flex-row min-h-screen">
+
+  <!-- ================= ১. আল্ট্রা-ইউনিক পাইপলাইন সাইডবার (Control HUD) ================= -->
+  <aside class="w-full md:w-80 bg-slate-900/95 border-r border-slate-800/80 p-5 flex flex-col justify-between">
+    <div>
+      <!-- ব্র্যান্ড লোগো উইথ কোয়ান্টাম ডট -->
+      <div class="flex items-center gap-3 mb-8">
+        <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-cyan-400 via-indigo-600 to-violet-600 flex items-center justify-center font-black text-white text-2xl neon-cyan-glow">
+          N
+        </div>
+        <div>
+          <h1 class="text-xl font-black text-white tracking-wider flex items-center gap-1.5">
+            Nexovate <span class="text-[9px] px-2 py-0.5 rounded-full bg-cyan-500/20 text-cyan-400 border border-cyan-500/30 font-bold tracking-normal">CORE</span>
+          </h1>
+          <p class="text-[11px] text-slate-400">Autonomous Sales Engine</p>
+        </div>
+      </div>
+
+      <!-- সাইডবার ইন্টারেক্টিভ পাইপলাইন নেভিগেশন -->
+      <div class="mb-3 text-[10px] font-black uppercase text-slate-500 tracking-widest px-1">Engine Workflow Pipeline</div>
+      
+      <nav class="space-y-3 relative">
+        <!-- Connecting Line -->
+        <div class="absolute left-6 top-6 bottom-6 w-0.5 bg-slate-800 -z-10"></div>
+
+        <!-- Node 1: Visual Studio -->
+        <a href="#" class="flex items-center justify-between p-3.5 rounded-2xl bg-gradient-to-r from-cyan-950/60 to-indigo-950/40 border border-cyan-500/40 text-cyan-300 font-bold hud-border shadow-lg">
+          <div class="flex items-center gap-3">
+            <span class="w-7 h-7 rounded-xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center text-xs font-black">01</span>
+            <div>
+              <div class="text-xs font-extrabold text-white">Visual Canvas Studio</div>
+              <div class="text-[10px] text-slate-400">1-Click Live Editor</div>
+            </div>
+          </div>
+          <span class="text-[9px] px-2 py-0.5 rounded bg-cyan-500/30 text-cyan-200 font-black">ACTIVE</span>
+        </a>
+
+        <!-- Node 2: Live Radar -->
+        <a href="#" class="flex items-center justify-between p-3 rounded-2xl text-slate-400 hover:bg-slate-800/60 hover:text-slate-200 transition">
+          <div class="flex items-center gap-3">
+            <span class="w-7 h-7 rounded-xl bg-slate-800 text-slate-400 flex items-center justify-center text-xs font-bold">02</span>
+            <div>
+              <div class="text-xs font-bold text-slate-300">Click Heatwave Radar</div>
+              <div class="text-[10px] text-slate-500">Live Visitor Behavior</div>
+            </div>
+          </div>
+          <i class="fa-solid fa-radar text-amber-400 text-xs"></i>
+        </a>
+
+        <!-- Node 3: Variant Splitter -->
+        <a href="#" class="flex items-center justify-between p-3 rounded-2xl text-slate-400 hover:bg-slate-800/60 hover:text-slate-200 transition">
+          <div class="flex items-center gap-3">
+            <span class="w-7 h-7 rounded-xl bg-slate-800 text-slate-400 flex items-center justify-center text-xs font-bold">03</span>
+            <div>
+              <div class="text-xs font-bold text-slate-300">Autonomous Splitter</div>
+              <div class="text-[10px] text-slate-500">Auto Traffic Allocation</div>
+            </div>
+          </div>
+          <span class="text-[10px] px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 font-bold">4 Live</span>
+        </a>
+
+        <!-- Node 4: Revenue Intelligence -->
+        <a href="#" class="flex items-center justify-between p-3 rounded-2xl text-slate-400 hover:bg-slate-800/60 hover:text-slate-200 transition">
+          <div class="flex items-center gap-3">
+            <span class="w-7 h-7 rounded-xl bg-slate-800 text-slate-400 flex items-center justify-center text-xs font-bold">04</span>
+            <div>
+              <div class="text-xs font-bold text-slate-300">Revenue Intelligence</div>
+              <div class="text-[10px] text-slate-500">Profit & Conversion Hub</div>
+            </div>
+          </div>
+          <i class="fa-solid fa-chart-line text-emerald-400 text-xs"></i>
+        </a>
+      </nav>
+    </div>
+
+    <!-- বটম সিস্টেম কন্ট্রোল মোড -->
+    <div class="mt-8 p-4 rounded-2xl glass-card border border-indigo-500/30">
+      <div class="flex items-center justify-between mb-2">
+        <span class="text-xs font-bold text-indigo-300 flex items-center gap-1.5">
+          <i class="fa-solid fa-microchip text-cyan-400"></i> Engine Auto-Pilot
+        </span>
+        <span class="relative flex h-2.5 w-2.5">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+        </span>
+      </div>
+      <p class="text-[11px] text-slate-400 mb-3">Self-optimizing traffic allocation is running in real-time.</p>
+      <div class="flex justify-between items-center bg-slate-950 p-2.5 rounded-xl border border-slate-800">
+        <span class="text-xs font-semibold text-slate-300">Status</span>
+        <span class="text-xs font-black text-emerald-400 bg-emerald-500/10 px-2.5 py-0.5 rounded border border-emerald-500/20">AUTONOMOUS</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ================= ২. মূল মেইন ড্যাশবোর্ড ================= -->
+  <main class="flex-1 p-4 md:p-8 overflow-y-auto space-y-8">
+
+    <!-- হেডার -->
+    <header class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 border-b border-slate-800 pb-6">
+      <div>
+        <h2 class="text-2xl font-black text-white tracking-wide">Nexovate Control Hub</h2>
+        <p class="text-xs text-slate-400">Automated Conversion Optimization Engine is actively running.</p>
+      </div>
+      <button id="openCanvasBtn" class="px-5 py-2.5 bg-gradient-to-r from-cyan-400 to-indigo-600 hover:from-cyan-300 hover:to-indigo-500 text-slate-950 font-black text-xs rounded-2xl transition shadow-lg shadow-cyan-500/20 flex items-center gap-2">
+        <i class="fa-solid fa-wand-magic-sparkles"></i> Open Visual Editor
+      </button>
+    </header>
+
+    <!-- ১-ক্লিক অটোমেশন স্মার্ট কার্ড -->
+    <div class="p-6 rounded-3xl bg-gradient-to-r from-slate-900 via-indigo-950/60 to-slate-900 border border-indigo-500/30 shadow-xl">
+      <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+        <div class="space-y-1">
+          <span class="text-[10px] font-bold px-2.5 py-1 rounded-full bg-cyan-500/20 text-cyan-300 border border-cyan-500/30">
+            <i class="fa-solid fa-bolt"></i> Autonomous Insight Detected
+          </span>
+          <h3 class="text-base font-bold text-white mt-2">Optimize Checkout Button Text & Color</h3>
+          <p class="text-xs text-slate-300">Changing text to <span id="insightText" class="text-emerald-400 font-bold">"Complete Order & Save 10%"</span> reduces drop-offs by 24%.</p>
+        </div>
+        <button id="applyBtn" class="px-5 py-2.5 bg-emerald-500 hover:bg-emerald-400 text-slate-950 text-xs font-extrabold rounded-2xl transition shadow-lg shadow-emerald-500/20 whitespace-nowrap pulse-green">
+          Apply Change Automatically
+        </button>
+      </div>
+    </div>
+
+    <!-- মেট্রিক্স কার্ডসমূহ -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      
+      <!-- কার্ড ১ -->
+      <div class="p-5 rounded-3xl glass-card border border-emerald-500/30">
+        <div class="flex justify-between items-center mb-2">
+          <span class="text-xs font-bold text-slate-400">Calculated Revenue Boost</span>
+          <div class="w-8 h-8 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-sm">
+            <i class="fa-solid fa-arrow-trend-up"></i>
+          </div>
+        </div>
+        <h3 id="revValue" class="text-2xl font-black text-white">+$4,120.00</h3>
+        <p class="text-[11px] text-emerald-400 mt-2 font-bold">+28.5% automatic lift</p>
+      </div>
+
+      <!-- কার্ড ২ -->
+      <div class="p-5 rounded-3xl glass-card border border-slate-800">
+        <div class="flex justify-between items-center mb-2">
+          <span class="text-xs font-bold text-slate-400">Peak Conversion Rate</span>
+          <div class="w-8 h-8 rounded-xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center text-sm">
+            <i class="fa-solid fa-chart-line"></i>
+          </div>
+        </div>
+        <h3 class="text-2xl font-black text-white">6.85%</h3>
+        <p class="text-[11px] text-cyan-400 mt-2 font-bold">Base was 2.30%</p>
+      </div>
+
+      <!-- কার্ড ৩ -->
+      <div class="p-5 rounded-3xl glass-card border border-slate-800">
+        <div class="flex justify-between items-center mb-2">
+          <span class="text-xs font-bold text-slate-400">Active Live Traffic</span>
+          <div class="w-8 h-8 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center text-sm animate-pulse">
+            <i class="fa-solid fa-users"></i>
+          </div>
+        </div>
+        <h3 id="trafficVal" class="text-2xl font-black text-amber-400">214 Active</h3>
+        <p class="text-[11px] text-slate-400 mt-2 font-bold">On Checkout Pages</p>
+      </div>
+
+      <!-- কার্ড ৪ -->
+      <div class="p-5 rounded-3xl glass-card border border-slate-800">
+        <div class="flex justify-between items-center mb-2">
+          <span class="text-xs font-bold text-slate-400">Winning Variant Signal</span>
+          <div class="w-8 h-8 rounded-xl bg-purple-500/20 text-purple-400 flex items-center justify-center text-sm">
+            <i class="fa-solid fa-trophy"></i>
+          </div>
+        </div>
+        <h3 class="text-2xl font-black text-purple-300">Variant B (99%)</h3>
+        <p class="text-[11px] text-purple-400 mt-2 font-bold">Auto-deployed</p>
+      </div>
+
+    </div>
+
+    <!-- ৩. ভিজ্যুয়াল DOM এডিটিং ইন্টারফেস -->
+    <div class="p-6 rounded-3xl glass-card border border-slate-800 space-y-4">
+      <div class="flex flex-col sm:flex-row justify-between sm:items-center gap-2">
+        <div>
+          <h3 class="text-base font-bold text-white">Live Target Element Inspector</h3>
+          <p class="text-xs text-slate-400">Select any button or text on your store to replace instantly without coding.</p>
+        </div>
+        <span class="text-xs font-bold text-cyan-400 bg-cyan-500/10 px-3 py-1 rounded-full border border-cyan-500/20 w-max">Target: /checkout-page</span>
+      </div>
+
+      <div class="p-4 bg-slate-950 rounded-2xl border border-slate-800 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-indigo-600/20 text-indigo-400 border border-indigo-500/30 flex items-center justify-center font-mono">
+            &lt;/&gt;
+          </div>
+          <div>
+            <p class="text-xs font-bold text-white">DOM Selector: <code class="text-cyan-300">#btn-checkout-submit</code></p>
+            <p class="text-[11px] text-slate-400">Current Live State: <span id="liveText" class="text-emerald-400 font-bold">"Complete Order & Save 10%"</span></p>
+          </div>
+        </div>
+        <button id="editBtn" class="px-4 py-2 bg-indigo-600 hover:bg-indigo-500 text-white text-xs font-bold rounded-xl transition">
+          Test Alternative Text
+        </button>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- JavaScript Dynamic Functions -->
+  <script>
+    const applyBtn = document.getElementById('applyBtn');
+    const liveText = document.getElementById('liveText');
+    const revValue = document.getElementById('revValue');
+
+    applyBtn.addEventListener('click', () => {
+      applyBtn.innerHTML = '<i class="fa-solid fa-spinner animate-spin"></i> Deploying...';
+      applyBtn.classList.remove('bg-emerald-500', 'hover:bg-emerald-400');
+      applyBtn.classList.add('bg-slate-700');
+
+      setTimeout(() => {
+        applyBtn.innerHTML = '<i class="fa-solid fa-check"></i> Applied Successfully!';
+        applyBtn.classList.remove('bg-slate-700');
+        applyBtn.classList.add('bg-cyan-500', 'text-slate-950');
+        liveText.innerText = '"Complete Order & Save 10%" (Active)';
+        revValue.innerText = '+$4,380.00';
+      }, 1000);
+    });
+
+    const trafficVal = document.getElementById('trafficVal');
+    setInterval(() => {
+      const current = parseInt(trafficVal.innerText);
+      const diff = Math.floor(Math.random() * 7) - 3;
+      const updated = Math.max(180, current + diff);
+      trafficVal.innerText = `${updated} Active`;
+    }, 3000);
+
+    const editBtn = document.getElementById('editBtn');
+    editBtn.addEventListener('click', () => {
+      const input = prompt("Enter new text for button #btn-checkout-submit:", "Get Instant 10% Discount Now");
+      if(input) {
+        liveText.innerText = `"${input}" (Testing)`;
+        alert("Variant created! Autonomous Engine will test this live against baseline.");
+      }
+    });
+  </script>
+</body>
+</html>
