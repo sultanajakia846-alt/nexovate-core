@@ -274,5 +274,49 @@
       }
     });
   </script>
+<!-- Nexovate Core Interactive Script -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    // ১. "Apply Change Automatically" বাটনে ক্লিক করলে ডাটা আপডেট হওয়ার লজিক
+    const applyBtn = document.querySelector("button:has-text('Apply Change'), .btn-apply, #apply-change");
+    
+    // বাটন সিলেক্ট করা (যদি নির্দিষ্ট ID না থাকে তবে বাটন টেক্সট দিয়ে ধরা)
+    const buttons = document.querySelectorAll("button");
+    buttons.forEach(button => {
+      if (button.innerText.includes("Apply Change Automatically")) {
+        button.addEventListener("click", function() {
+          // রিয়েল-টাইম নোটিফিকেশন ও অ্যানিমেশন
+          alert("✅ Success: Nexovate AI engine has applied the new variant to your checkout page!");
+          
+          // রেভিনিউ এবং কনভার্সন রেট রিয়েল-টাইমে বাড়িয়ে দেওয়া
+          const revenueElem = document.querySelector(".revenue-boost, h3:contains('$')");
+          if (revenueElem) {
+            revenueElem.innerText = "+$5,240.00";
+            revenueElem.style.color = "#10B981";
+          }
+          
+          button.innerText = "✓ Change Applied";
+          button.style.backgroundColor = "#059669";
+          button.disabled = true;
+        });
+      }
+    });
+
+    // ২. রিয়েল-টাইম লাইভ ট্রাফিক কাউন্টার (Simulated Real Traffic)
+    setInterval(() => {
+      // প্রতি ৫ সেকেন্ড পর পর ট্রাফিক সংখ্যায় ছোট পরিবর্তন আনা
+      const trafficElems = document.querySelectorAll("div, p, span, h2, h3");
+      trafficElems.forEach(elem => {
+        if (elem.children.length === 0 && elem.innerText.includes("Active") && elem.innerText.match(/\d+/)) {
+          let currentTraffic = parseInt(elem.innerText.match(/\d+/)[0]);
+          let change = Math.floor(Math.random() * 7) - 3; // -3 থেকে +3 পর্যন্ত র‍্যান্ডম চেঞ্জ
+          let newTraffic = Math.max(180, currentTraffic + change);
+          elem.innerText = elem.innerText.replace(/\d+/, newTraffic);
+        }
+      });
+    }, 4000);
+  });
+</script>
+
 </body>
 </html>
