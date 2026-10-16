@@ -338,5 +338,43 @@
 
     });
   </script>
+  <!-- Firebase Realtime Database Integration -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+    import { getDatabase, ref, push } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyADwUjQFQOpsHWR8XHJHqSpOjWelxXyzew",
+      authDomain: "nexovate-core.firebaseapp.com",
+      projectId: "nexovate-core",
+      storageBucket: "nexovate-core.firebasestorage.app",
+      messagingSenderId: "518476492228",
+      appId: "1:518476492228:web:ab81d0aa0bd959d192c891",
+      measurementId: "G-1TDW2QYC19"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getDatabase(app);
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const applyBtn = document.querySelector("button") || document.querySelector(".bg-emerald-500");
+      
+      if (applyBtn) {
+        applyBtn.addEventListener("click", () => {
+          const actionRef = ref(db, 'applied_changes');
+          push(actionRef, {
+            title: "Optimize Checkout Button Text & Color",
+            new_text: "Complete Order & Save 10%",
+            timestamp: new Date().toLocaleString()
+          }).then(() => {
+            alert("সফলভাবে ফায়ারবেসে পরিবর্তন জমা হয়েছে!");
+          }).catch((err) => {
+            alert("এরর: " + err.message);
+          });
+        });
+      }
+    });
+  </script>
+
 </body>
 </html>
